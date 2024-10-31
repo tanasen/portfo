@@ -4,10 +4,10 @@ import csv
 app = Flask(__name__)
 print(__name__)
 
-#@app.route("/<username>/<int:post_id>")
-#def hello_world(username=None, post_id=None):
- #   #print(url_for('static', filename='ad.ico'))  
-  #  return render_template('index.html', name=username, post_id=post_id)
+@app.route("/<username>/<int:post_id>")
+def hello_world(username=None, post_id=None):
+    print(url_for('static', filename='ad.ico'))  
+    return render_template('index.html', name=username, post_id=post_id)
 
 @app.route("/index.html")
 def my_home():
@@ -55,15 +55,15 @@ def submit_form():
     #return render_template('login.html', error=error)    
         
 
-#@app.route("/about.html")
-#def about():
-#    return render_template('about.html')
+@app.route("/about.html")
+def about():
+    return render_template('about.html')
 
-#@app.route("/contact.html")
-#def contact():
-#    return render_template('contact.html')    
+@app.route("/contact.html")
+def contact():
+    return render_template('contact.html')    
 
-#@app.route("/favicon.ico")
-#def blog():
-#    return "Blogs suck"    
+@app.route("/favicon.ico")
+def blog():
+    return "Blogs suck"    
 
